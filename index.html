@@ -2,43 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pixels by Lohitha</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixels by Lohitha - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <h1>Pixels by Lohitha</h1>
-    <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="container">
+      <h1 class="logo"><a href="index.html">Pixels by Lohitha</a></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="hero">
-    <h2>Capturing Moments, One Frame at a Time 📸</h2>
-    <p>Event | Family | Portraits | Lifestyle</p>
-  </section>
+  <main class="container">
+    <section class="hero">
+      <h2>Capturing Moments, One Frame at a Time 📸</h2>
+      <p class="subtitle">Event | Family | Portraits | Lifestyle</p>
+      <button onclick="location.href='contact.html'">Book Now</button>
+    </section>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="gallery">
-      <img src="gallery/photo1.jpg" alt="Client Work 1">
-      <img src="gallery/photo2.jpg" alt="Client Work 2">
-      <img src="gallery/photo3.jpg" alt="Client Work 3">
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Lohitha — a passionate photographer based in Texas, capturing special moments with emotion, light, and love. Let’s create beautiful memories together!</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📷 DM me on <a href="https://instagram.com/pixelsbylohitha" target="_blank">@pixelsbylohitha</a> for bookings and inquiries.</p>
-  </section>
+    <section class="portfolio">
+      <h3>Portfolio</h3>
+      <div class="gallery">
+        <div class="gallery-item">Client Work 1</div>
+        <div class="gallery-item">Client Work 2</div>
+        <div class="gallery-item">Client Work 3</div>
+        <!-- Replace above divs with images later -->
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Pixels by Lohitha</p>
