@@ -1,97 +1,91 @@
-/* Google Fonts */
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: #fffaf7;
-  color: #333;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fffaf7;
+  color: #333;
   line-height: 1.6;
 }
 
+/* Container */
 .container {
   max-width: 960px;
   margin: auto;
   padding: 0 1rem;
 }
 
+/* Header */
 header {
   background-color: #1a1a1a;
   color: white;
   padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
 .logo a {
-  color: #f9c74f;
   font-family: 'Pacifico', cursive;
   font-size: 2rem;
+  color: #f9c74f;
   text-decoration: none;
   margin-left: 1rem;
 }
-
 nav {
-  float: right;
   margin-right: 1rem;
 }
-
 .nav-links {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
 }
-
 .nav-links li {
   margin-left: 1.5rem;
 }
-
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.3rem;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
-
 .nav-links a:hover,
 .nav-links a.active {
   border-color: #f9c74f;
 }
 
-main {
-  padding: 2rem 0;
-}
-
 /* Hero Section */
 .hero {
   text-align: center;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
-
 .hero h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
-
 .subtitle {
   font-style: italic;
   color: #555;
   margin-bottom: 1.5rem;
 }
-
 .hero button {
-  background: #f9c74f;
+  background-color: #f9c74f;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   border-radius: 30px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
-
 .hero button:hover {
-  background: #e6b739;
+  background-color: #e6b739;
 }
 
 /* Portfolio */
@@ -99,18 +93,16 @@ main {
   text-align: center;
   margin-bottom: 2rem;
 }
-
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 1.5rem;
 }
-
 .gallery-item {
-  background: #fff;
+  background-color: white;
   height: 150px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,112 +112,26 @@ main {
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
-
 .gallery-item:hover {
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-/* About */
-.about-page h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.about-photo img {
-  width: 300px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
-.about-text {
-  max-width: 500px;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-/* Contact */
-.contact-page h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.contact-page p {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem 1rem;
-  margin-bottom: 1rem;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  resize: vertical;
-  transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #f9c74f;
-}
-
-.contact-form button {
-  background: #f9c74f;
-  border: none;
-  padding: 0.9rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #e6b739;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* Footer */
 footer {
-  background: #1a1a1a;
+  background-color: #1a1a1a;
   color: white;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 3rem;
+  margin-top: 4rem;
   font-size: 0.9rem;
 }
 
 /* Responsive */
 @media (max-width: 700px) {
   nav {
-    float: none;
-    text-align: center;
-    margin: 0;
+    margin: 1rem 0 0 0;
   }
   .nav-links {
     justify-content: center;
-  }
-  .about-content {
-    flex-direction: column;
-  }
-  .about-photo img {
-    width: 80%;
   }
 }
