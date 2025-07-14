@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pixels by Lohitha - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1.3" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1.4" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
   <header>
@@ -22,50 +22,48 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container fade-in">
     <section class="hero">
       <h2>Capturing Moments, One Frame at a Time 📸</h2>
       <p class="subtitle">Event | Family | Portraits | Lifestyle</p>
       <button onclick="location.href='contact.html'">Book Now</button>
     </section>
 
+    <!-- Portfolio Carousel -->
     <section class="portfolio">
       <h3>Portfolio</h3>
-      <div class="gallery">
-        <div class="gallery-item">
-          <a href="images/portraits.JPG" data-lightbox="gallery" data-title="Portraits">
+      <div class="swiper portfolio-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <img src="images/portraits.JPG" alt="Portraits" loading="lazy" />
-          </a>
-          <p>Portraits</p>
-        </div>
-        <div class="gallery-item">
-          <a href="images/housewarming.JPG" data-lightbox="gallery" data-title="Housewarming">
+            <p>Portraits</p>
+          </div>
+          <div class="swiper-slide">
             <img src="images/housewarming.JPG" alt="Housewarming" loading="lazy" />
-          </a>
-          <p>Housewarming</p>
-        </div>
-        <div class="gallery-item">
-          <a href="images/gender-reveal.jpg" data-lightbox="gallery" data-title="Gender Reveal">
+            <p>Housewarming</p>
+          </div>
+          <div class="swiper-slide">
             <img src="images/gender-reveal.jpg" alt="Gender Reveal" loading="lazy" />
-          </a>
-          <p>Gender Reveal</p>
+            <p>Gender Reveal</p>
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 
+    <!-- Instagram Slider -->
     <section class="instagram">
-      <h3>Latest on Instagram</h3>
-      <p style="text-align: center;">Follow <a href="https://instagram.com/pixelsbylohitha" target="_blank">@pixelsbylohitha</a> for behind-the-scenes & stories</p>
-      <div style="text-align: center;">
-        <iframe 
-          src="https://www.instagram.com/pixelsbylohitha/embed" 
-          width="100%" 
-          height="600" 
-          frameborder="0" 
-          scrolling="no" 
-          allowtransparency="true" 
-          allow="encrypted-media">
-        </iframe>
+      <h3>From Instagram</h3>
+      <p style="text-align: center;">Follow <a href="https://instagram.com/pixelsbylohitha" target="_blank">@pixelsbylohitha</a> for behind-the-scenes & more!</p>
+      <div class="swiper instagram-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/02.jpg" alt="Instagram Photo 1" /></div>
+          <div class="swiper-slide"><img src="images/03.jpg" alt="Instagram Photo 2" /></div>
+          <div class="swiper-slide"><img src="images/04.jpg" alt="Instagram Photo 3" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
   </main>
@@ -74,6 +72,41 @@
     <p>&copy; 2025 Pixels by Lohitha</p>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const portfolioSwiper = new Swiper('.portfolio-swiper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        600: { slidesPerView: 2 },
+        900: { slidesPerView: 3 }
+      }
+    });
+
+    const instagramSwiper = new Swiper('.instagram-swiper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoplay: { delay: 3000 },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        600: { slidesPerView: 2 },
+        900: { slidesPerView: 3 }
+      }
+    });
+  </script>
 </body>
 </html>
