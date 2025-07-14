@@ -10,6 +10,11 @@ body {
   line-height: 1.6;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Container */
 .container {
   max-width: 960px;
@@ -89,14 +94,14 @@ nav {
   background-color: #e05b50;
 }
 
-/* Portfolio */
+/* Portfolio Gallery */
 .portfolio h3 {
   text-align: center;
   margin-bottom: 2rem;
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 .gallery-item {
@@ -124,6 +129,73 @@ nav {
   box-shadow: 0 12px 30px rgba(255, 111, 97, 0.3);
 }
 
+/* Instagram Section */
+.instagram {
+  margin: 3rem 0;
+}
+.instagram h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* About Section */
+.about-card {
+  margin: 3rem 0;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.about-photo {
+  max-width: 300px;
+  border-radius: 16px;
+}
+.about-content p {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+/* Contact Form */
+.contact-card {
+  margin: 3rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ff6f61;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #e05b50;
+}
+.contact-form button {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #e05b50;
+}
+
 /* Footer */
 footer {
   background-color: #1a1a1a;
@@ -141,5 +213,16 @@ footer {
   }
   .nav-links {
     justify-content: center;
+  }
+  .about-content {
+    flex-direction: column;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 450px) {
+  .gallery {
+    grid-template-columns: 1fr;
   }
 }

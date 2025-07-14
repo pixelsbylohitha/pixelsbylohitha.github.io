@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pixels by Lohitha - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1.1" />
-
-  <!-- Lightbox2 CSS -->
+  <link rel="stylesheet" href="styles.css?v=1.2" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -36,23 +34,38 @@
       <div class="gallery">
         <div class="gallery-item">
           <a href="images/portraits.JPG" data-lightbox="gallery" data-title="Portraits">
-            <img src="images/portraits.JPG" alt="Portraits" />
+            <img src="images/portraits.JPG" alt="Portraits" loading="lazy" />
           </a>
           <p>Portraits</p>
         </div>
         <div class="gallery-item">
           <a href="images/housewarming.JPG" data-lightbox="gallery" data-title="Housewarming">
-            <img src="images/housewarming.JPG" alt="Housewarming" />
+            <img src="images/housewarming.JPG" alt="Housewarming" loading="lazy" />
           </a>
           <p>Housewarming</p>
         </div>
         <div class="gallery-item">
           <a href="images/gender-reveal.jpg" data-lightbox="gallery" data-title="Gender Reveal">
-            <img src="images/gender-reveal.jpg" alt="Gender Reveal" />
+            <img src="images/gender-reveal.jpg" alt="Gender Reveal" loading="lazy" />
           </a>
           <p>Gender Reveal</p>
         </div>
-        <!-- Add more items here -->
+      </div>
+    </section>
+
+    <section class="instagram">
+      <h3>Latest on Instagram</h3>
+      <p style="text-align: center;">Follow <a href="https://instagram.com/pixelsbylohitha" target="_blank">@pixelsbylohitha</a> for behind-the-scenes & stories</p>
+      <div style="text-align: center;">
+        <iframe 
+          src="https://www.instagram.com/pixelsbylohitha/embed" 
+          width="100%" 
+          height="600" 
+          frameborder="0" 
+          scrolling="no" 
+          allowtransparency="true" 
+          allow="encrypted-media">
+        </iframe>
       </div>
     </section>
   </main>
@@ -61,7 +74,6 @@
     <p>&copy; 2025 Pixels by Lohitha</p>
   </footer>
 
-  <!-- Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
