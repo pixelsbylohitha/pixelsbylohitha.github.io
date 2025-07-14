@@ -6,6 +6,9 @@
   <title>Pixels by Lohitha - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=1.1" />
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -32,17 +35,24 @@
       <h3>Portfolio</h3>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="images/portraits.jpg" alt="Portraits" />
+          <a href="images/portraits.JPG" data-lightbox="gallery" data-title="Portraits">
+            <img src="images/portraits.JPG" alt="Portraits" />
+          </a>
           <p>Portraits</p>
         </div>
         <div class="gallery-item">
-          <img src="images/housewarming.jpg" alt="Housewarming" />
+          <a href="images/housewarming.JPG" data-lightbox="gallery" data-title="Housewarming">
+            <img src="images/housewarming.JPG" alt="Housewarming" />
+          </a>
           <p>Housewarming</p>
         </div>
         <div class="gallery-item">
-          <img src="images/gender-reveal.jpg" alt="Gender Reveal" />
+          <a href="images/gender-reveal.jpg" data-lightbox="gallery" data-title="Gender Reveal">
+            <img src="images/gender-reveal.jpg" alt="Gender Reveal" />
+          </a>
           <p>Gender Reveal</p>
         </div>
+        <!-- Add more items here -->
       </div>
     </section>
   </main>
@@ -50,5 +60,8 @@
   <footer>
     <p>&copy; 2025 Pixels by Lohitha</p>
   </footer>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
